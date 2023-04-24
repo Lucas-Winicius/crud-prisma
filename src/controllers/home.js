@@ -45,6 +45,22 @@ class Home {
 
     return res.status(200).json(user);
   }
+  
+  async delete(req, res) {
+    let user;
+    try {
+      user = await prisma.user.delete({
+        where: {
+          email: req.body.email,
+        },
+      });
+    } catch (err) {
+      const e = Treatment.errors({ data: err });
+      return res.status(e.status).json(e);
+    }
+
+    return res.status(200).json(user);
+  }
 
 }
 
