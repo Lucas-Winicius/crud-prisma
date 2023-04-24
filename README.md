@@ -53,6 +53,7 @@ Before finishing, I would like to say that in the future I will create a new API
 
 **Thank you for reading up to this point.**
 
-<a href="https://instagram.com/sr_pumpkin_"><img width="20%" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
-
-<a href="www.linkedin.com/in/lucas-winicius-03571725a"><img width="20%" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+<div style="display: flex;">
+  <a href="https://www.linkedin.com/in/lucas-winicius-03571725a"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+  <a href="https://instagram.com/sr_pumpkin_"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+</div>
