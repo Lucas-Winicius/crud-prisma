@@ -2,7 +2,19 @@ const prisma = require("../../prisma/index");
 const Treatment = require("../lib/Treatment");
 class Home {
   async get(req, res) {
-    res.json({ message: "Hello, world!" });
+    let user;
+    try {
+      user = await prisma.user.findUnique({
+        where: {
+          email: req.body.email,
+        },
+      });
+    } catch (err) {
+      const e = Treatment.errors({ data: err });
+      return res.status(e.status).json(e);
+    }
+
+    return res.status(200).json(user || {});
   }
 
   async post(req, res) {
@@ -14,7 +26,7 @@ class Home {
       return res.status(e.status).json(e);
     }
 
-    return res.status(201).json(user);
+    return res.status(200).json(user);
   }
 }
 
